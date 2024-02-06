@@ -33,22 +33,22 @@ export const readClientsByIdController = async (
   req: Request,
   res: Response
 ): Promise<Response> => {
-  const { id } = req.params;
-  const clientsId = await readClientByIdService(Number(id));
+  const clientId = Number(res.locals.clientId);
+  const clientsId = await readClientByIdService(clientId);
 
   return res.status(200).json(clientsId);
 };
 
 export const updateClientController = async (req: Request, res: Response) => {
-  const id: number = Number(req.params.id);
+  const clientId = Number(res.locals.clientId);
   const newClient: clientUpdateRequest = req.body;
-  const updateClient = await updateClientService(newClient, id);
+  const updateClient = await updateClientService(newClient, clientId);
 
   return res.json(updateClient);
 };
 
 export const deleteClientController = async (req: Request, res: Response) => {
-  const clientId = Number(req.params.id);
+  const clientId = Number(res.locals.clientId);
   await deleteClientService(clientId);
   res.status(204).send();
 };

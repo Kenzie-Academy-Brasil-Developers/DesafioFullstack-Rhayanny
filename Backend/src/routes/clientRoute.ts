@@ -27,15 +27,12 @@ clientsRoutes.post(
 
 clientsRoutes.use(verifyToken);
 
-clientsRoutes.get("/", readClientsController);
-
-clientsRoutes.get("/:id", clientValidation, readClientsByIdController);
+clientsRoutes.get("/", readClientsByIdController);
 
 clientsRoutes.patch(
-  "/:id",
+  "/",
   validateBody(clientUpdateSchema),
-  clientValidation,
   updateClientController
 );
 
-clientsRoutes.delete("/:id", clientValidation, deleteClientController);
+clientsRoutes.delete("/", deleteClientController);

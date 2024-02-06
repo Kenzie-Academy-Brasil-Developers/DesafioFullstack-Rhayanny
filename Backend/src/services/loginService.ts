@@ -23,5 +23,13 @@ export const loginService = async (
     expiresIn: process.env.EXPIRES_IN!,
   });
 
-  return { token };
+  return {
+    token: token,
+    client: {
+      id: client.id,
+      name: client.name,
+      email: client.email,
+      phone: client.phone
+    },
+  };
 };
