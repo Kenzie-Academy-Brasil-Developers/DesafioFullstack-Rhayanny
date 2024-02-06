@@ -1,0 +1,117 @@
+@keyframes rotateIn {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  border-radius: 20px;
+  border: 3px solid var(--Color-primary);
+  padding: 34px 18px;
+  margin: 10% auto;
+  width: 300px;
+  height: 100%;
+  background: var(--Gray-3);
+  box-shadow: rgba(72, 230, 64, 0.35) 5px 5px 5px;
+  box-sizing: border-box;
+
+  transform: rotateX(-90deg);
+  animation: rotateIn 0.5s ease-in-out forwards;
+
+  h2 {
+    color: var(--Gray-0);
+    font-weight: 700;
+    letter-spacing: 6px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+
+    &::before,
+    h2::after {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      left: 0px;
+      background-color: var(--Color-primary-Focus);
+      box-shadow: rgba(29, 111, 25, 0.921) 0px 0px 20px;
+    }
+    h2::before {
+      width: 18px;
+      height: 18px;
+      background-color: var(--Color-primary-Focus);
+    }
+
+    h2::after {
+      width: 18px;
+      height: 18px;
+      animation: pulse 1s linear infinite;
+    }
+  }
+
+  p {
+    color: var(--Color-primary-Focus);
+    font-size: 13px;
+    margin-top: 3px;
+  }
+
+  span {
+    margin: 0 auto;
+    color: var(--Gray-1);
+  }
+
+  button {
+    margin-top: 10px;
+    border: none;
+    padding: 10px 20px;
+    border: none;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    background: var(--Color-primary-Negative);
+    box-shadow: 0 0 15px var(--Color-primary);
+    &:hover {
+      box-shadow: 0 0 5px rgba(29, 104, 25, 0.433),
+        0 0 25px rgba(44, 129, 39, 0.434), 0 0 30px rgba(72, 230, 64, 0.35),
+        0 0 80px rgba(72, 230, 64, 0.35);
+    }
+  }
+
+  a {
+    margin-top: 10px;
+    border: none;
+    padding: 10px 20px;
+    border: none;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 7px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transition-property: box-shadow;
+    background-color: var(--Gray-1);
+    box-shadow: 0 0 15px var(--Color-primary);
+    &:hover {
+      box-shadow: 0 0 0px, 0 0 5px, 0 0 15px, 0 0 1px;
+    }
+    // background-color: var(--Gray-1);
+    // padding: 8px 90px;
+    // &:hover {
+    //   background-color: var(--Gray-2);
+    // }
+  }
+}

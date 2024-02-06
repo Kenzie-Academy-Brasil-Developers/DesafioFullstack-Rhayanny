@@ -1,0 +1,28 @@
+.card {
+  div {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 4px;
+    background-color: var(--Gray-4);
+    @media (min-width: 600px) {
+      flex-direction: row;
+    }
+    span {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      p {
+        width: 90%;
+        color: var(--Gray-1);
+        @media (min-width: 600px) {
+          align-items: center;
+        }
+      }
+      button {
+        background-color: transparent;
+      }
+    }
+  }
+}

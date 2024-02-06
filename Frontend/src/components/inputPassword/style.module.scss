@@ -1,0 +1,33 @@
+.inputBox {
+  input {
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    overflow: none;
+    width: 100%;
+    padding: 0px 13px;
+    margin-top: 8px;
+    background-color: var(--Gray-2);
+    color: #868e96;
+
+    &:focus {
+      border: 4px solid var(--Color-primary);
+    }
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  aside {
+    height: 50px;
+  }
+  span {
+    cursor: pointer;
+    position: relative;
+    color: var(--Color-primary);
+    bottom: 28px;
+    left: 230px;
+    background-color: transparent;
+    border: transparent;
+  }
+}

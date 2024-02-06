@@ -1,0 +1,16 @@
+@import url(reset.scss);
+@import url(global.scss);
+@import url(thyphografy.scss);
+@import url(buttons.scss);
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--Gray-4);
+  }
+  
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1220px;
+    padding: 1.5rem;
+  }

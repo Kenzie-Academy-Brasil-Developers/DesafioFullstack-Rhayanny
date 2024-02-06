@@ -1,0 +1,71 @@
+.modalOverlay {
+  position: fixed;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  inset: 0;
+  padding: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+
+  form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    gap: 15px;
+    width: 390px;
+    background: var(--Gray-3);
+    animation: entradaDaEsquerda 1s ease-out;
+
+    @keyframes entradaDaEsquerda {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    div {
+      display: flex;
+      margin: 0px;
+      padding: 20px;
+      border-radius: 4px 4px 0 0;
+      height: 60px;
+      align-items: center;
+      background: var(--Gray-2);
+
+      h2 {
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      span {
+        cursor: pointer;
+        position: relative;
+        left: 190px;
+        color: var(--Gray-1);
+      }
+    }
+
+    label {
+      margin: 0 15px;
+    }
+    input {
+      margin: 15px;
+      width: 92%;
+    }
+
+    button {
+      margin: 15px;
+      background-color: var(--Color-primary);
+      border: none;
+      margin-top: 10px;
+      width: 92%;
+      height: 48px;
+      &:hover {
+        background-color: var(--Color-primary-Focus);
+      }
+    }
+  }
+}

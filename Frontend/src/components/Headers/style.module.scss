@@ -1,0 +1,70 @@
+header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgba(14, 93, 14, 0.518);
+
+  h2 {
+    margin-left: 5%;
+    font-size: 30px;
+    color: var(--Gray-4);
+    text-shadow: 0 0 10px rgb(57, 254, 57), 0 0 20px rgb(13, 192, 13),
+      0 0 30px rgb(5, 255, 5);
+    animation: neon-glow 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes neon-glow {
+    to {
+      text-shadow: 0 0 10px rgb(24, 255, 24), 0 0 20px rgb(17, 242, 17),
+        0 0 30px rgb(0, 238, 0);
+    }
+  }
+}
+
+.flexBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & > div {
+    min-width: clamp(0px, 100%, 100%);
+    display: flex;
+    align-items: center;
+    flex-direction:row;
+  }
+
+  @media (min-width: 600px) {
+    justify-content: space-between;
+
+    & > div {
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 30px;
+    }
+  }
+
+  p {
+    color: var(--Gray-0);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  span {
+    margin-left: 10px;
+    width: 20px;
+    color: var(--Gray-0);
+    cursor: pointer;
+  }
+
+  button {
+    border: none;
+    width: 40px;
+    color: var(--Gray-0);
+    background-color: var(--Gray-3);
+    border: 2px solid var(--Color-primary-Negative);
+    &:hover {
+      background-color: var(--Color-primary-Focus);
+      border: 2px solid var(--Color-primary-Focus);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.title {
+  font-weight: 700;
+  line-height: 1.4;
+
+  &.one {
+    font-size: 18px;
+  }
+
+  &.two {
+    font-size: 16px;
+  }
+
+  &.Headline {
+    font-size: 12px;
+  }
+}
+
+.Headline {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  &.Paragraph {
+    font-size: 16px;
+  }
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 400;
+  font-family: var(--font-family);
+  color: var(--Gray-1);
+}
